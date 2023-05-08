@@ -16,6 +16,7 @@ public class Volume {
         int tinggi = 4;
         int hasilVolPP;
         
+        System.out.println("~Search Volume~");
         System.out.println("~Volume Persegi Panjang~");
         hasilVolPP = panjang * lebar * tinggi;
         System.out.println("Volume Persegi Panjang : " + hasilVolPP + "\n");
