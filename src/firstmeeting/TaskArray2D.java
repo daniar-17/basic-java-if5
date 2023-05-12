@@ -12,60 +12,87 @@ package firstmeeting;
 public class TaskArray2D {
     public static void main(String[] args) {
         System.out.println("Task Array 2 Dimension");
+        System.out.println("---------------------- \n");
         int manyStudent = 3;
         int manyStudy = 5;
         int student[][] = new int[manyStudent][manyStudy];
         char gradeStudent[][] = new char[manyStudent][manyStudy];
-        // index 0 d2 = nilai bahasa ingris 
-        // index 1 d2 = nilai bahasa indonesia
-        // index 2 d2 = nilai matematika
-        // index 3 d2 = nilai atol
-        // index 4 d2 = nilai algoritma
-        // 1 msukan nilai ke student index ke 0;
-        student[0][0] = 50;
-        student[0][1] = 70;
-        student[0][2] = 80;
-        student[0][3] = 90;
-        student[0][4] = 100;
+        String[] studies = {"Bahasa Inggris","Bahasa Indonesia","Matematika","Atol","Algoritma"}; 
+        
+        // 1 input grade student index ke 0;
+        student[0][0] = 72;
+        student[0][1] = 81;
+        student[0][2] = 92;
+        student[0][3] = 95;
+        student[0][4] = 88;
+        
+        // 1 input grade student index ke 1;
+        student[1][0] = 55;
+        student[1][1] = 65;
+        student[1][2] = 75;
+        student[1][3] = 85;
+        student[1][4] = 60;
+        
+        // 1 input grade student index ke 2;
+        student[2][0] = 75;
+        student[2][1] = 82;
+        student[2][2] = 87;
+        student[2][3] = 92;
+        student[2][4] = 84;
 
         // 2 check namanya nilai untuk mendapatkan index
         for (int i = 0; i < manyStudent; i++) {
             for (int j = 0; j < manyStudy; j++) {
-                if (student[i][j] > 85) {
-                    gradeStudent[i][j] = 'a';
+                if(student[i][j] > 85){
+                    gradeStudent[i][j] = 'A';
+                }else if(student[i][j] > 70 && student[i][j] <= 85){
+                    gradeStudent[i][j] = 'B';
+                }else if(student[i][j] > 60 && student[i][j] <= 70){
+                    gradeStudent[i][j] = 'C';
+                }else if(student[i][j] > 50 && student[i][j] <= 60){
+                    gradeStudent[i][j] = 'D';
+                }else if(student[i][j] <= 50){
+                    gradeStudent[i][j] = 'E';
                 }
-
                 // lanjutin sendiri
             }
         }
 
         // 3 check nilai masing index per mahasiwa mengunakan switch case
         for (int i = 0; i < manyStudent; i++) {
+            System.out.println("Mahasiswa Ke : " + (i));
             for (int j = 0; j < manyStudy; j++) {
+                System.out.print(studies[j] + " : [" + gradeStudent[i][j] + "]- ");
                 switch (gradeStudent[i][j]) {
                     case 'A':
-                        System.out.println("anda lulus dengans sangan memuasakan");
+                        System.out.println("Lulus dengan Sangat Baik.");
+                        break;
+                    case 'B':
+                        System.out.println("Lulus dengan Baik.");
+                        break;
+                    case 'C':
+                        System.out.println("Lulus dengan Cukup.");
+                        break;
+                    case 'D':
+                        System.out.println("Lulus dengan Kurang.");
+                        break;
+                    case 'E':
+                        System.out.println("Tidak Lulus Maaf.");
                         break;
                 }
-
-                // lanjut sendiri
-                // kasih defult kluarkan informasi index error
-                
             }
+            System.out.println("");
         }
         
         // 4 check rata2 nilai masing2 mahasiswa;
-        int totalNilai = 0;
+        double totalNilai = 0;
+        System.out.println("Rata Rata Nilai :");
         for (int i = 0; i < manyStudent; i++) {
             for (int j = 0; j < manyStudy; j++) {
-
-                totalNilai = totalNilai + gradeStudent[i][j];
-                // kasih logic untuk menghitung rata2 nilai
-                // di output
-
+                totalNilai = totalNilai + student[i][j];
             }
-
+            System.out.println("Mahasiswa Ke - " + i + " : " + (totalNilai/manyStudy));
+            totalNilai = 0;
         }
-        
-    }
+    }//Last Line 
 }
