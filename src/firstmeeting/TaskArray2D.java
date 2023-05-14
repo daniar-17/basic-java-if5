@@ -12,7 +12,7 @@ package firstmeeting;
 public class TaskArray2D {
     public static void main(String[] args) {
         System.out.println("Task Array 2 Dimension");
-        System.out.println("---------------------- \n");
+        System.out.println("----------------------");
         int manyStudent = 3;
         int manyStudy = 5;
         int student[][] = new int[manyStudent][manyStudy];
@@ -62,7 +62,7 @@ public class TaskArray2D {
         for (int i = 0; i < manyStudent; i++) {
             System.out.println("Mahasiswa Ke : " + (i));
             for (int j = 0; j < manyStudy; j++) {
-                System.out.print(studies[j] + " : [" + gradeStudent[i][j] + "]- ");
+                System.out.print(studies[j] + " : [" + student[i][j] + " : " +gradeStudent[i][j]+ "]- ");
                 switch (gradeStudent[i][j]) {
                     case 'A':
                         System.out.println("Lulus dengan Sangat Baik.");
@@ -79,6 +79,8 @@ public class TaskArray2D {
                     case 'E':
                         System.out.println("Tidak Lulus Maaf.");
                         break;
+                    default:
+                        System.out.println("Error System.");
                 }
             }
             System.out.println("");
