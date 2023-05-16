@@ -37,6 +37,7 @@ public class TaskProcedureFunction {
         resultAll("Result Volume Pyramid : ", ResultVolPyramid);
     }
     
+    // Function to Result Output
     private static void resultAll(String text, double volume) {
         System.out.println(text + volume);
     }
