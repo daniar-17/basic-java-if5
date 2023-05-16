@@ -5,7 +5,9 @@
  */
 package firstmeeting;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,5 +27,21 @@ public class LearnMap {
         for (Map.Entry<Integer, String> me : hashMap.entrySet()) {
             System.out.println(me.getKey() +" : "+ me.getValue());
         }
+        System.out.println("------------");
+        Map<Integer, List<Integer>> mahasiswa = new HashMap<>();
+        List<Integer> nilai = new ArrayList<>();
+        
+        mahasiswa.put(10115152, nilai);
+        nilai.add(86);
+        nilai.add(92);
+        nilai.add(82);
+        for (Map.Entry<Integer, List<Integer>> mhs : mahasiswa.entrySet()) {
+            System.out.println("Nim Mahasiswa : " + mhs.getKey());
+            System.out.print("Nilai : ");
+            for (Integer valNilai : mhs.getValue()) {
+                System.out.print(valNilai + ", ");
+            }
+        }
+        System.out.println();
     }
 }
