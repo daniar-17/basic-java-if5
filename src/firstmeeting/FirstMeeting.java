@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package firstmeeting;
+import java.util.Random;
 
 /**
  *
@@ -53,6 +54,7 @@ public class FirstMeeting {
         //%d = decimal atau untuk Integer
         //%f = float untuk Float
         //$s = string
+        System.out.println("Random Value : "  + new Random().nextInt(20));
     }
     
 }
