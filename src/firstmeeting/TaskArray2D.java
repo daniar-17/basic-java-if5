@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package firstmeeting;
+import java.util.Random;
 
 /**
  *
@@ -19,26 +20,29 @@ public class TaskArray2D {
         char gradeStudent[][] = new char[manyStudent][manyStudy];
         String[] studies = {"Bahasa Inggris","Bahasa Indonesia","Matematika","Atol","Algoritma"}; 
         
+        // create instance of Random class
+        Random rand = new Random();
+        
         // 1 input grade student index ke 0;
-        student[0][0] = 72;
-        student[0][1] = 81;
-        student[0][2] = 92;
-        student[0][3] = 95;
-        student[0][4] = 88;
+        student[0][0] = rand.nextInt(100);
+        student[0][1] = rand.nextInt(100);
+        student[0][2] = rand.nextInt(100);
+        student[0][3] = rand.nextInt(100);
+        student[0][4] = rand.nextInt(100);
         
         // 1 input grade student index ke 1;
-        student[1][0] = 55;
-        student[1][1] = 65;
-        student[1][2] = 75;
-        student[1][3] = 85;
-        student[1][4] = 60;
+        student[1][0] = rand.nextInt(100);
+        student[1][1] = rand.nextInt(100);
+        student[1][2] = rand.nextInt(100);
+        student[1][3] = rand.nextInt(100);
+        student[1][4] = rand.nextInt(100);
         
         // 1 input grade student index ke 2;
-        student[2][0] = 75;
-        student[2][1] = 82;
-        student[2][2] = 87;
-        student[2][3] = 92;
-        student[2][4] = 84;
+        student[2][0] = rand.nextInt(100);
+        student[2][1] = rand.nextInt(100);
+        student[2][2] = rand.nextInt(100);
+        student[2][3] = rand.nextInt(100);
+        student[2][4] = rand.nextInt(100);
 
         // 2 check namanya nilai untuk mendapatkan index
         for (int i = 0; i < manyStudent; i++) {
