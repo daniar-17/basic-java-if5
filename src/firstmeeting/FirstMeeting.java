@@ -55,6 +55,18 @@ public class FirstMeeting {
         //%f = float untuk Float
         //$s = string
         System.out.println("Random Value : "  + new Random().nextInt(20));
+
+        for (int i = 1; i <= 30; i++) {
+            if (i % 3 == 0 && i % 5 == 0){
+                System.out.println("Daniar Ganteng");
+            }else if(i % 3 == 0){
+                System.out.println("Daniar");
+            }else if(i % 5 == 0){
+                System.out.println("Ganteng");
+            }else{
+                System.out.println(i);
+            }
+        }
     }
     
 }
